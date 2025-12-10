@@ -41,4 +41,4 @@ A minimal Zotero 7 plugin that summarizes papers with an LLM (OpenAI or Gemini),
 2. Use Tools → AI Summarizer
 
 ## ☕ Support
-Give this repo a star and share it people who might need this utility!
+Give this repo a star and send it to people who might need this plugin!
