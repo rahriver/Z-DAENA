@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8"/>
+  <title>AI Summarizer</title>
+  <link rel="stylesheet" href="popup.css"/>
+  <script src="chrome://zotero/content/include.js"></script>
+  <script src="popup.js"></script>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="title">AI Summarizer</div>
+    <div class="actions">
+      <button id="settingsBtn" class="secondary">Settings</button>
+      <button id="cancelBtn" class="secondary" disabled="disabled">Cancel</button>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="row">
+      <label for="scopeSelect">Scope</label>
+      <select id="scopeSelect">
+        <option value="selectedItem">Selected item</option>
+        <option value="selectedItems">Selected items</option>
+        <option value="selectedCollection">Selected folder/collection</option>
+        <option value="library">Whole library</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label for="promptBox">Prompt</label>
+      <textarea id="promptBox" rows="6"></textarea>
+    </div>
+
+    <div class="row row-inline">
+      <label class="checkbox">
+        <input type="checkbox" id="saveNoteChk"/>
+        Save summary as child note
+      </label>
+      <button id="runBtn" class="primary">Summarize</button>
+    </div>
+
+    <div class="status" id="statusLine">Ready.</div>
+    <div class="progress" id="progressLine"></div>
+  </div>
+
+  <div class="chat" id="chat"></div>
+</body>
+</html>
+

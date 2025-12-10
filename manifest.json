@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Z-Daena",
+  "version": "0.1.1",
+  "description": "Paper summaries in Zotero 7 using LLM.",
+  "icons": {
+    "16": "content/icon16.png",
+    "32": "content/icon32.png",
+    "48": "content/icon48.png",
+    "96": "content/icon96.png"
+  },
+  "applications": {
+    "zotero": {
+      "id": "ai-summarizer@local.dev",
+      "strict_min_version": "7.0",
+      "strict_max_version": "7.0.999",
+      "update_url": "https://example.invalid/zotero-ai-summarizer/updates.json"
+    }
+  }
+}
+

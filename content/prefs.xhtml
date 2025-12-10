@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8"/>
+  <title>Z-DAENA Settings</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 16px; }
+    h1 { margin: 0 0 12px 0; font-size: 18px; }
+    .row { display: grid; grid-template-columns: 160px 1fr; gap: 12px; margin: 10px 0; align-items: start; }
+    label { color: #374151; margin-top: 6px; }
+    input, select, textarea {
+      width: 100%; box-sizing: border-box;
+      border: 1px solid #d1d5db; border-radius: 10px;
+      padding: 8px; background: #fff;
+    }
+    textarea { resize: vertical; }
+    .btns { display: flex; justify-content: flex-end; gap: 10px; margin-top: 14px; }
+    button { border: 1px solid #d1d5db; border-radius: 10px; padding: 8px 10px; cursor: pointer; background: #fff; }
+    .primary { border-color: #2563eb; background: #2563eb; color: #fff; font-weight: 600; }
+    .hint { color: #6b7280; font-size: 12px; margin-top: 6px; }
+  </style>
+  <script src="chrome://zotero/content/include.js"></script>
+  <script src="prefs.js"></script>
+</head>
+<body>
+  <h1>Z-DAENA Settings</h1>
+
+  <div class="row">
+    <label for="provider">Provider</label>
+    <div>
+      <select id="provider">
+        <option value="openai">OpenAI</option>
+        <option value="gemini">Gemini</option>
+      </select>
+      <div class="hint">API keys are stored in Zotero preferences (not encrypted).</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <label for="model">Model</label>
+    <input id="model" type="text" placeholder="e.g., gpt-4.1-mini or gemini-2.0-flash"/>
+  </div>
+
+  <div class="row">
+    <label for="openaiKey">OpenAI API Key</label>
+    <input id="openaiKey" type="password" placeholder="sk-..."/>
+  </div>
+
+  <div class="row">
+    <label for="geminiKey">Gemini API Key</label>
+    <input id="geminiKey" type="password" placeholder="AIza..."/>
+  </div>
+
+  <div class="row">
+    <label for="maxChars">Max chars to send</label>
+    <input id="maxChars" type="number" min="5000" step="1000"/>
+  </div>
+
+  <div class="row">
+    <label for="prompt">Default prompt</label>
+    <textarea id="prompt" rows="10"></textarea>
+  </div>
+
+  <div class="row">
+    <label for="saveDefault">Save note by default</label>
+    <input id="saveDefault" type="checkbox" style="width:auto;"/>
+  </div>
+
+  <div class="row">
+    <label for="overwrite">Overwrite existing AI note</label>
+    <input id="overwrite" type="checkbox" style="width:auto;"/>
+  </div>
+
+  <div class="row">
+    <label for="tagOnSave">Tag item on save</label>
+    <div>
+      <input id="tagOnSave" type="checkbox" style="width:auto;"/>
+      <div class="hint">Adds a tag after saving a summary note.</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <label for="tagName">Tag name</label>
+    <input id="tagName" type="text" placeholder="ai-summary"/>
+  </div>
+
+  <div class="btns">
+    <button id="cancelBtn">Cancel</button>
+    <button id="saveBtn" class="primary">Save</button>
+  </div>
+</body>
+</html>
+

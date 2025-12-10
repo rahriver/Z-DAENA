@@ -1,0 +1,145 @@
+/* content/popup.css */
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-size: 13px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f6f7f9;
+  color: #111;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.actions button {
+  margin-left: 8px;
+}
+
+.panel {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.row {
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.row-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+label {
+  color: #374151;
+  margin-top: 6px;
+}
+
+select, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px;
+  background: #fff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 7px 10px;
+  cursor: pointer;
+  background: #fff;
+}
+
+button.primary {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+}
+
+button.secondary {
+  background: #fff;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #374151;
+}
+
+.status {
+  margin-top: 8px;
+  color: #374151;
+}
+
+.progress {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.chat {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: auto;
+  height: calc(100vh - 240px);
+}
+
+.msg {
+  max-width: 92%;
+  border-radius: 12px;
+  padding: 10px 10px;
+  white-space: pre-wrap;
+  border: 1px solid #e5e7eb;
+}
+
+.msg.user {
+  align-self: flex-end;
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.msg.assistant {
+  align-self: flex-start;
+  background: #ffffff;
+}
+
+.msg .meta {
+  font-size: 11px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
