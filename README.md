@@ -34,11 +34,11 @@ A minimal Zotero 7 plugin that summarizes papers with an LLM (OpenAI or Gemini),
 2. Drag and drop `zdaena.xpi` into the Plugins window.
 3. Restart Zotero.
 
-## Usage
+## ⏯ Usage
 ### Open the UI
 
 1. Click the AI Summarizer toolbar button (if visible)
 2. Use Tools → AI Summarizer
 
-## Support
+## ☕ Support
 Give this repo a star and share it people who might need this utility!
